@@ -1,4 +1,9 @@
 package alma.alma_payment.model.dto;
 
-public class PaymentResponseDto {
+import alma.alma_payment.model.enums.PaymentStatus;
+
+public record PaymentResponseDto (
+        Long paymentId,
+        PaymentStatus status
+) {
 }

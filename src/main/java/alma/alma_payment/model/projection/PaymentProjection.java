@@ -1,4 +1,11 @@
 package alma.alma_payment.model.projection;
 
-public class PaymentProjection {
+import alma.alma_payment.model.enums.CurrencyType;
+import alma.alma_payment.model.enums.PaymentStatus;
+
+public interface PaymentProjection {
+    Long getPaymentId();
+    Double getAmount();
+    CurrencyType getCurrency();
+    PaymentStatus getStatus();
 }

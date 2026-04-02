@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AlmaPaymentApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AlmaPaymentApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AlmaPaymentApplication.class, args);
+    }
 
 }
