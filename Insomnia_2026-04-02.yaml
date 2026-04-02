@@ -1,0 +1,148 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Alma Payment
+meta:
+  id: wrk_0ad3425be07244d69f9bfc3764827781
+  created: 1775118435089
+  modified: 1775118435089
+  description: ""
+collection:
+  - url: http://localhost:8080/api/payments
+    name: Create Payment
+    meta:
+      id: req_dccee5c603ea4552a61591ee03f4b792
+      created: 1775119482949
+      modified: 1775119791972
+      isPrivate: false
+      description: ""
+      sortKey: -1775119544145
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"amount": 10000.0,
+        	"currency": "KZT",
+        	"description": "Описание",
+        	"clientId": 1
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/payments/2/confirm
+    name: Confirm Payment
+    meta:
+      id: req_e8bd11b30b90484d98c3cfbdb7eb0b34
+      created: 1775119495777
+      modified: 1775120249040
+      isPrivate: false
+      description: ""
+      sortKey: -1775119544082.5
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/payments/1/cancel
+    name: Cancel Payment
+    meta:
+      id: req_b3a86dd6018f4b22acfaf1b125e06ac4
+      created: 1775119502363
+      modified: 1775119749317
+      isPrivate: false
+      description: ""
+      sortKey: -1775119544070
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/payments/1
+    name: Get Payment Details
+    meta:
+      id: req_1215495445ec463dbeaf6c47f0d46673
+      created: 1775119510609
+      modified: 1775119711425
+      isPrivate: false
+      description: ""
+      sortKey: -1775119544095
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/payments/clients/1/payments
+    name: Get Payments
+    meta:
+      id: req_381c7b30782247feb79237d673a80f33
+      created: 1775119544045
+      modified: 1775119781980
+      isPrivate: false
+      description: ""
+      sortKey: -1775119544045
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_14f7941087e7617a46ab99b42196e70310af053a
+    created: 1775118435091
+    modified: 1775118435091
+environments:
+  name: Base Environment
+  meta:
+    id: env_14f7941087e7617a46ab99b42196e70310af053a
+    created: 1775118435090
+    modified: 1775118435090
+    isPrivate: false
